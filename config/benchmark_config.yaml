@@ -23,5 +23,5 @@ sweep:
   kernel_types: copy,scale,add,triad
   num_iterations:
     smoke: 2
-    baseline: 14800
+    baseline: 10000
     extended: 22600

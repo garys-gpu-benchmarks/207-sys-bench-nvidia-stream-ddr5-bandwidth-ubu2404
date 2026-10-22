@@ -15,7 +15,7 @@ Compiles official STREAM src/stream.c with gcc -O3 -fopenmp into build/stream (c
 | dtype | `--dtype` | smoke=FP64, baseline=FP64, extended=FP64 | FP64 | From Parameter list; see Execution Description With Parameters. |
 | array_size | `--array-size` | smoke=10000000, baseline=20000000, extended=40000000 | 20000000 | From Parameter list; see Execution Description With Parameters. |
 | kernel_types | `--kernel-types` | smoke=copy,scale,add,triad, baseline=copy,scale,add,triad, extended=copy,scale,add,triad | copy,scale,add,triad | From Parameter list; see Execution Description With Parameters. |
-| num_iterations | `--num-iterations` | smoke=2, baseline=14800, extended=22600 | 14800 | From Parameter list; see Execution Description With Parameters. |
+| num_iterations | `--num-iterations` | smoke=2, baseline=10000, extended=22600 | 10000 | From Parameter list; see Execution Description With Parameters. |
 
 ## Invocation
 
