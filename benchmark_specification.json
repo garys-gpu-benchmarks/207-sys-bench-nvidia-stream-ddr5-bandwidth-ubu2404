@@ -32,7 +32,7 @@
   {
     "field_name": "Validation Objective",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
-    "value": "Validates that STREAM Copy/Scale/Add/Triad rates parse and the derived efficiency metric is finite"
+    "value": "Validates that STREAM Copy/Scale/Add/Triad rates parse"
   },
   {
     "field_name": "Metrics",
@@ -47,12 +47,12 @@
   {
     "field_name": "Command Execution Details and Purpose",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
-    "value": "Compile official STREAM src/stream.c with gcc -O3 -fopenmp into build/stream (copied to bin/stream), run it with OMP_NUM_THREADS, parse Copy/Scale/Add/Triad Best Rate MB/s, convert to GB/s, and compute triad/400 efficiency, to measure CPU STREAM bandwidth. The collector does not launch with numactl. Overlay build.sh is unused"
+    "value": "Compile official STREAM src/stream.c with gcc -O3 -fopenmp into build/stream (copied to bin/stream), run it with OMP_NUM_THREADS, parse Copy/Scale/Add/Triad Best Rate MB/s, convert to GB/s to measure CPU STREAM bandwidth. The collector does not launch with numactl. Overlay build.sh is unused"
   },
   {
     "field_name": "Command Methodology",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
-    "value": "Compile src/stream.c with gcc -O3 -fopenmp, run build/stream under OMP_NUM_THREADS, parse Copy, Scale, Add, and Triad Best Rate MB/s, convert to GB/s, and compute triad/400 efficiency. numactl is not used"
+    "value": "Compile src/stream.c with gcc -O3 -fopenmp, run build/stream under OMP_NUM_THREADS, parse Copy, Scale, Add, and Triad Best Rate MB/s, convert to GB/s. numactl is not used"
   },
   {
     "field_name": "Execution Description With Parameters",
@@ -102,17 +102,17 @@
   {
     "field_name": "run_benchmark Command Plus Options for Smoke Run",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
-    "value": "bash run_benchmark.sh --smoke --validate --numa-node 0 --num-threads 4 --thread-affinity core --page-size 4KB --dtype FP64 --array-size 10000000 --kernel-types copy,scale,add,triad --num-iterations 2"
+    "value": "bash run_benchmark.sh --smoke --validate --numa-node 0 --num-threads 4 --thread-affinity core --array-size 10000000 --num-iterations 2"
   },
   {
     "field_name": "run_benchmark Command Plus Options for Baseline Run",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
-    "value": "bash run_benchmark.sh --baseline --validate --numa-node 0 --num-threads 16 --thread-affinity core --page-size 4KB --dtype FP64 --array-size 20000000 --kernel-types copy,scale,add,triad --num-iterations 10000"
+    "value": "bash run_benchmark.sh --baseline --validate --numa-node 0 --num-threads 16 --thread-affinity core --array-size 20000000 --num-iterations 10000"
   },
   {
     "field_name": "run_benchmark Command Plus Options for Extended Run",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
-    "value": "bash run_benchmark.sh --extended --validate --numa-node 0 --num-threads 20 --thread-affinity core --page-size 4KB --dtype FP64 --array-size 40000000 --kernel-types copy,scale,add,triad --num-iterations 22600"
+    "value": "bash run_benchmark.sh --extended --validate --numa-node 0 --num-threads 20 --thread-affinity core --array-size 40000000 --num-iterations 22600"
   },
   {
     "field_name": "Output Fields / Metrics to Parse",
@@ -242,27 +242,27 @@
   {
     "field_name": "Parameter_04",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
-    "value": "page_size"
+    "value": "array_size"
   },
   {
     "field_name": "Parameter_05",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
-    "value": "dtype"
+    "value": "num_iterations"
   },
   {
     "field_name": "Parameter_06",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
-    "value": "array_size"
+    "value": "-"
   },
   {
     "field_name": "Parameter_07",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
-    "value": "kernel_types"
+    "value": "-"
   },
   {
     "field_name": "Parameter_08",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
-    "value": "num_iterations"
+    "value": "-"
   },
   {
     "field_name": "Parameter_09",
@@ -367,7 +367,7 @@
   {
     "field_name": "Installation and Execution Summary",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
-    "value": "Compile official STREAM src/stream.c with gcc -O3 -fopenmp into build/stream (copied to bin/stream), run it with OMP_NUM_THREADS, parse Copy/Scale/Add/Triad Best Rate MB/s, convert to GB/s, and compute triad/400 efficiency, to measure CPU STREAM bandwidth. The collector does not launch with numactl. Overlay build.sh is unused"
+    "value": "Compile official STREAM src/stream.c with gcc -O3 -fopenmp into build/stream (copied to bin/stream), run it with OMP_NUM_THREADS, parse Copy/Scale/Add/Triad Best Rate MB/s, convert to GB/s to measure CPU STREAM bandwidth. The collector does not launch with numactl. Overlay build.sh is unused"
   },
   {
     "field_name": "Workload Command Line Executable",
@@ -387,7 +387,7 @@
   {
     "field_name": "Execution Summary (Run and Measure)",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
-    "value": "Compile official STREAM src/stream.c with gcc -O3 -fopenmp into build/stream (copied to bin/stream), run it with OMP_NUM_THREADS, parse Copy/Scale/Add/Triad Best Rate MB/s, convert to GB/s, and compute triad/400 efficiency, to measure CPU STREAM bandwidth. The collector does not launch with numactl. Overlay build.sh is unused"
+    "value": "Compile official STREAM src/stream.c with gcc -O3 -fopenmp into build/stream (copied to bin/stream), run it with OMP_NUM_THREADS, parse Copy/Scale/Add/Triad Best Rate MB/s, convert to GB/s to measure CPU STREAM bandwidth. The collector does not launch with numactl. Overlay build.sh is unused"
   },
   {
     "field_name": "nVidia Porting Instructions (Reference Only)",
@@ -407,7 +407,7 @@
   {
     "field_name": "Profile Parameter Values",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Parameters_SmokeBaselineExtend",
-    "value": "{\"numa_node\": {\"smoke\": \"0\", \"baseline\": \"0\", \"extended\": \"0\", \"notes\": \"\"}, \"num_threads\": {\"smoke\": \"4\", \"baseline\": \"16\", \"extended\": \"20\", \"notes\": \"\"}, \"thread_affinity\": {\"smoke\": \"core\", \"baseline\": \"core\", \"extended\": \"core\", \"notes\": \"\"}, \"page_size\": {\"smoke\": \"4KB\", \"baseline\": \"4KB\", \"extended\": \"4KB\", \"notes\": \"\"}, \"dtype\": {\"smoke\": \"FP64\", \"baseline\": \"FP64\", \"extended\": \"FP64\", \"notes\": \"\"}, \"array_size\": {\"smoke\": \"10000000\", \"baseline\": \"20000000\", \"extended\": \"40000000\", \"notes\": \"\"}, \"kernel_types\": {\"smoke\": \"copy,scale,add,triad\", \"baseline\": \"copy,scale,add,triad\", \"extended\": \"copy,scale,add,triad\", \"notes\": \"Sweep/list value. Command column documents it; omit this flag so yaml expands cases.\"}, \"num_iterations\": {\"smoke\": \"2\", \"baseline\": \"10000\", \"extended\": \"22600\", \"notes\": \"H100 2026-08-16 array_size=20M NTIMES=5000 -> 192s (3:12), 2 STREAM invocations ~86 GB/s. Extended 14300 extrapolated ~9:10 from 192s; use 15600 for ~10:00. Do not copy AMD 11000. Retimed 2026-08-17 toward 3-4 min baseline; extended scaled by the same factor. 2026-08-18 retune: baseline>=3min / extended>=10min or extended~15min; NVIDIA copied from AMD. | 2026-09-10: retimed from ledger (extended observed 22:33 @ num_iterations=37560) toward Gary's ~15 min target. Linear extrapolation, not yet re-measured. | 2026-09-28 GARY_LEDGER (aggregated_runtime_ledgers_101_201_301_401_20260928_9am; targets baseline 3-5 min, extended 8-15 min): 23280/25000 -> 23280/36000. extended 25000 measured 6:39/9:05 (avg 7:52) -> 36000 (~11:20; 9:35-13:05 across the two measured rates). Baseline 23280 (2:51/3:49/4:04) left unchanged. Unconfirmed by a fresh run. | 2026-10-21 baseline 18600 -> 14800; 207 and 407 now share one value (as 1xx/3xx do). Ledger-predicted baseline runtime 24.04 ~3:22, 26.04 ~3:52 (limits: baseline 5:00, extended 15:00). | 2026-10-22 baseline 14800 -> 10000. 207 baseline took 6:27 at 14800 on a Xeon 8452Y host whose STREAM Triad was 94 GB/s (v1.0.21 fresh clone, Project401); 407 took 2:02 at 14800 on a Xeon 8470 host. 10000 is about 4:20 on the slow host and 1:25 on the fast one. Extended stays 22600 (about 9:50 on the slow host)\"}}"
+    "value": "{\"numa_node\": {\"smoke\": \"0\", \"baseline\": \"0\", \"extended\": \"0\", \"notes\": \"\"}, \"num_threads\": {\"smoke\": \"4\", \"baseline\": \"16\", \"extended\": \"20\", \"notes\": \"\"}, \"thread_affinity\": {\"smoke\": \"core\", \"baseline\": \"core\", \"extended\": \"core\", \"notes\": \"\"}, \"array_size\": {\"smoke\": \"10000000\", \"baseline\": \"20000000\", \"extended\": \"40000000\", \"notes\": \"\"}, \"num_iterations\": {\"smoke\": \"2\", \"baseline\": \"10000\", \"extended\": \"22600\", \"notes\": \"H100 2026-08-16 array_size=20M NTIMES=5000 -> 192s (3:12), 2 STREAM invocations ~86 GB/s. Extended 14300 extrapolated ~9:10 from 192s; use 15600 for ~10:00. Do not copy AMD 11000. Retimed 2026-08-17 toward 3-4 min baseline; extended scaled by the same factor. 2026-08-18 retune: baseline>=3min / extended>=10min or extended~15min; NVIDIA copied from AMD. | 2026-09-10: retimed from ledger (extended observed 22:33 @ num_iterations=37560) toward Gary's ~15 min target. Linear extrapolation, not yet re-measured. | 2026-09-28 GARY_LEDGER (aggregated_runtime_ledgers_101_201_301_401_20260928_9am; targets baseline 3-5 min, extended 8-15 min): 23280/25000 -> 23280/36000. extended 25000 measured 6:39/9:05 (avg 7:52) -> 36000 (~11:20; 9:35-13:05 across the two measured rates). Baseline 23280 (2:51/3:49/4:04) left unchanged. Unconfirmed by a fresh run. | 2026-10-21 baseline 18600 -> 14800; 207 and 407 now share one value (as 1xx/3xx do). Ledger-predicted baseline runtime 24.04 ~3:22, 26.04 ~3:52 (limits: baseline 5:00, extended 15:00). | 2026-10-22 baseline 14800 -> 10000. 207 baseline took 6:27 at 14800 on a Xeon 8452Y host whose STREAM Triad was 94 GB/s (v1.0.21 fresh clone, Project401); 407 took 2:02 at 14800 on a Xeon 8470 host. 10000 is about 4:20 on the slow host and 1:25 on the fast one. Extended stays 22600 (about 9:50 on the slow host)\"}}"
   },
   {
     "field_name": "Profile Command Authorship",

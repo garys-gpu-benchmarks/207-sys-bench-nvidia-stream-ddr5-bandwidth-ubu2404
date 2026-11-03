@@ -85,11 +85,11 @@ Three operator scripts from [`garys-gpu-benchmarks/gpu-bench-suite`](https://git
 
 ## 1. Overview
 
-Compiles official STREAM src/stream.c with gcc -O3 -fopenmp into build/stream (copied to bin/stream) and runs Copy/Scale/Add/Triad. array_size: STREAM_ARRAY_SIZE. num_iterations: STREAM NTIMES. num_threads: OMP_NUM_THREADS. Sweep dimensions: numa_node, num_threads, thread_affinity, page_size, dtype, array_size, kernel_types, num_iterations.
+Compiles official STREAM src/stream.c with gcc -O3 -fopenmp into build/stream (copied to bin/stream) and runs Copy/Scale/Add/Triad. array_size: STREAM_ARRAY_SIZE. num_iterations: STREAM NTIMES. num_threads: OMP_NUM_THREADS. Sweep dimensions: numa_node, num_threads, thread_affinity, array_size, num_iterations.
 
 ## 2. What It Validates
 
-- Validates that STREAM Copy/Scale/Add/Triad rates parse and the derived efficiency metric is finite
+- Validates that STREAM Copy/Scale/Add/Triad rates parse
 - #1: Best Copy bandwidth, GB/s (copy_bandwidth_gb_s); is present and physically sensible.
 - #2: Best Scale bandwidth, GB/s (scale_bandwidth_gb_s); is present and physically sensible.
 - #3: Best Add bandwidth, GB/s (add_bandwidth_gb_s); is present and physically sensible.
