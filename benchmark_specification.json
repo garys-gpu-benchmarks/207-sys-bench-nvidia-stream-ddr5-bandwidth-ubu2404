@@ -25,6 +25,11 @@
     "value": "sys-bench-nvidia-stream-ddr5-bandwidth-ubu2404"
   },
   {
+    "field_name": "Repo Directory Name",
+    "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
+    "value": "207-sys-bench-nvidia-stream-ddr5-bandwidth-ubu2404"
+  },
+  {
     "field_name": "Main Goal",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
     "value": "Measure sustained CPU STREAM bandwidth"
