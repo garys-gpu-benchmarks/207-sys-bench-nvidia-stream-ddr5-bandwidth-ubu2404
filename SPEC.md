@@ -17,7 +17,7 @@ Compiles official STREAM src/stream.c with gcc -O3 -fopenmp into build/stream (c
 ## Invocation
 
 ```bash
-Compile stream.c with gcc -O3 -fopenmp; run build/stream with OMP_NUM_THREADS; parse STREAM stdout. Does not use numactl
+Compile src/stream.c with gcc -O3 -fopenmp and run build/stream
 ```
 
 ## Raw Output Format
@@ -40,12 +40,12 @@ Compiles official STREAM src/stream.c with gcc -O3 -fopenmp into build/stream (c
 
 ## Installation and Execution Summary
 
-Compile official STREAM src/stream.c with gcc -O3 -fopenmp into build/stream (copied to bin/stream), run it with OMP_NUM_THREADS, parse Copy/Scale/Add/Triad Best Rate MB/s, convert to GB/s to measure CPU STREAM bandwidth. The collector does not launch with numactl. Overlay build.sh is unused
+Compile official STREAM src/stream.c with gcc -O3 -fopenmp into build/stream (copied to bin/stream), run it with OMP_NUM_THREADS, parse Copy/Scale/Add/Triad Best Rate MB/s, convert to GB/s to measure CPU STREAM bandwidth. The collector adds numactl --cpunodebind/--membind for numa_node when the host accepts the bind. Overlay build.sh is unused
 
 ## Platform Portability
 
 - **AMD (primary):** ```bash
-Compile stream.c with gcc -O3 -fopenmp; run build/stream with OMP_NUM_THREADS; parse STREAM stdout. Does not use numactl
+Compile src/stream.c with gcc -O3 -fopenmp and run build/stream
 ```
 - **NVIDIA:** Native NVIDIA CUDA workload. Execute on the stated Ubuntu release with the host NVIDIA driver and CUDA userspace. ROCm porting notes do not apply.
 

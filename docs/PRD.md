@@ -15,13 +15,13 @@ This PRD.md section is populated from benchmark_specification.json, which is the
 STREAM - CPU (Copy/Scale/Add/Triad)
 
 ## Execution Summary (Run and Measure)
-Compile official STREAM src/stream.c with gcc -O3 -fopenmp into build/stream (copied to bin/stream), run it with OMP_NUM_THREADS, parse Copy/Scale/Add/Triad Best Rate MB/s, convert to GB/s to measure CPU STREAM bandwidth. The collector does not launch with numactl. Overlay build.sh is unused
+Compile official STREAM src/stream.c with gcc -O3 -fopenmp into build/stream (copied to bin/stream), run it with OMP_NUM_THREADS, parse Copy/Scale/Add/Triad Best Rate MB/s, convert to GB/s to measure CPU STREAM bandwidth. The collector adds numactl --cpunodebind/--membind for numa_node when the host accepts the bind. Overlay build.sh is unused
 
 ## Main Goal
 Measure sustained CPU STREAM bandwidth
 
 ## Validation Objective
-Validates that STREAM Copy/Scale/Add/Triad rates parse
+Validates Copy, Scale, Add, and Triad DRAM bandwidth
 
 ## Workload Category
 Memory, Bandwidth & Data Movement
