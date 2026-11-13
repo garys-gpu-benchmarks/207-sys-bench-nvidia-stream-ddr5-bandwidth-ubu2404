@@ -40,6 +40,11 @@
     "value": "Compile src/stream.c with gcc -O3 -fopenmp and run build/stream"
   },
   {
+    "field_name": "Execution Description With Parameters",
+    "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
+    "value": "Compiles official STREAM src/stream.c with gcc -O3 -fopenmp into build/stream (copied to bin/stream) and runs Copy/Scale/Add/Triad. array_size: STREAM_ARRAY_SIZE. num_iterations: STREAM NTIMES. num_threads: OMP_NUM_THREADS. The collector adds numactl --cpunodebind/--membind for numa_node when the host accepts the bind. dtype is FP64 from the official source. thread_affinity core sets OMP_PROC_BIND=close. page_size and kernel_types yaml fields are not applied as CLI knobs. The overlay scripts/build.sh is not used by the collector"
+  },
+  {
     "field_name": "Metrics",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
     "value": "#1: Best Copy bandwidth, GB/s (copy_bandwidth_gb_s); #2: Best Scale bandwidth, GB/s (scale_bandwidth_gb_s); #3: Best Add bandwidth, GB/s (add_bandwidth_gb_s); #4: Best Triad bandwidth, GB/s (triad_bandwidth_gb_s)"
@@ -173,11 +178,6 @@
     "field_name": "Command Methodology",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
     "value": "Compile src/stream.c with gcc -O3 -fopenmp, run build/stream under OMP_NUM_THREADS, parse Copy, Scale, Add, and Triad Best Rate MB/s, convert to GB/s. numactl binds to numa_node when the host accepts it"
-  },
-  {
-    "field_name": "Execution Description With Parameters",
-    "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
-    "value": "Compiles official STREAM src/stream.c with gcc -O3 -fopenmp into build/stream (copied to bin/stream) and runs Copy/Scale/Add/Triad. array_size: STREAM_ARRAY_SIZE. num_iterations: STREAM NTIMES. num_threads: OMP_NUM_THREADS. The collector adds numactl --cpunodebind/--membind for numa_node when the host accepts the bind. dtype is FP64 from the official source. thread_affinity core sets OMP_PROC_BIND=close. page_size and kernel_types yaml fields are not applied as CLI knobs. The overlay scripts/build.sh is not used by the collector"
   },
   {
     "field_name": "Execution Domain",
