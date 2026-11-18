@@ -12,7 +12,7 @@ Compiles official STREAM src/stream.c with gcc -O3 -fopenmp into build/stream (c
 | num_threads | `--num-threads` | smoke=4, baseline=16, extended=20 | 16 | From Parameter list; see Execution Description With Parameters. |
 | thread_affinity | `--thread-affinity` | smoke=core, baseline=core, extended=core | core | From Parameter list; see Execution Description With Parameters. |
 | array_size | `--array-size` | smoke=10000000, baseline=20000000, extended=40000000 | 20000000 | From Parameter list; see Execution Description With Parameters. |
-| num_iterations | `--num-iterations` | smoke=2, baseline=10000, extended=22600 | 10000 | From Parameter list; see Execution Description With Parameters. |
+| num_iterations | `--num-iterations` | smoke=368, baseline=10000, extended=22600 | 10000 | From Parameter list; see Execution Description With Parameters. |
 
 ## Invocation
 
